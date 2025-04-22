@@ -1,0 +1,8 @@
+# for more config info: https://github.com/jesseduffield/lazygit/blob/master/docs/Config.md
+
+keybinding:
+  commits:
+    # for no conflict with Tmux's pane navigation
+    moveDownCommit: <c-J>
+    moveUpCommit: <c-K>
+    openLogMenu: <c-L>
