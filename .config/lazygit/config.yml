@@ -1,8 +1,11 @@
 # for more config info: https://github.com/jesseduffield/lazygit/blob/master/docs/Config.md
 
 keybinding:
+  universal:
+    rangeSelectDown: J
+    rangeSelectUp: K
   commits:
     # for no conflict with Tmux's pane navigation
-    moveDownCommit: <c-J>
-    moveUpCommit: <c-K>
-    openLogMenu: <c-L>
+    moveDownCommit: <s-down>
+    moveUpCommit: <s-up>
+    openLogMenu: <c-/>
