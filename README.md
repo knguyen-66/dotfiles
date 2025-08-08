@@ -4,15 +4,9 @@ Personal app setting & configuration
 
 ## Requirements
 
-GNU Stow, Vim, NeoVim, Tmux
+A Linux machine. That's all. 
 
-```sh
-# for Debian & Ubuntu
-sudo apt install stow vim neovim tmux
-# for other distros, check the main page of the packages for installation instruction
-```
-
-You will also want to setup the NeoVim's recommended packages to get the full functionality. More information in [kickstart.nvim README file](https://github.com/knguyen-66/kickstart.nvim/blob/master/README.md)
+The setup script will install required packages using [customized setup scripts](./scripts/).
 
 ## Setup
 
@@ -30,6 +24,12 @@ cd /path/to/dotfiles
 ```
 
 ## Customization
+
+### Adding packages to install
+
+Just add a new folder in pre/post-setup scripts. Add your package installation steps. `chmod +x scripts/<post-setup or pre-setup>/<folder>/<script_name>.sh`, and you are good to go.
+- [pre-setup](./scripts/pre-setup/): running before dotfiles are populated to system
+- [post-setup](./scripts/post-setup/): running after dotfiles are populated to system
 
 ### Adding Tmux plugins
 
@@ -58,13 +58,17 @@ The repo use `https://github.com/knguyen-66/kickstart.nvim` for the NeoVim envir
 
 For more information about kickstart.nvim configs, check out the [kickstart.nvim README file](https://github.com/knguyen-66/kickstart.nvim/blob/master/README.md).
 
-For submitting changes onto the repository, first you need to set the origin url to the correct repository:
+For submitting changes onto the repository, first you need to set the Kickstart.nvim origin url to the correct repository:
 
 ```sh
 cd .config/nvim
 git remote set-url origin https://github.com/knguyen-66/kickstart.nvim
+# or add as new SSH origin
+git remote add origin_ssh git@github.com:knguyen-66/kickstart.nvim
 git fetch --all
 # then you can create branches/MR/... as needed
+# afterwards, push using the origin_ssh remote
+git push origin_ssh main
 
 # if you also want to pull latest changes from upstream repo
 git remote add upstream https://github.com/nvim-lua/kickstart.nvim

@@ -1,0 +1,7 @@
+/* hide tabs on top bar */
+#TabsToolbar { visibility: collapse !important }
+
+/* hide Sidebery title bar */
+#sidebar-header {
+  display: none;
+}
