@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-set -ex
+set -x
 
 [[ -z "$(command -v firefox)" ]] && { echo "Firefox not installed. Need to install firefox manually first. Exiting. "; exit 0; }
 

@@ -4,10 +4,8 @@ set -ex
 
 # get current script path
 SCRIPT_DIR=$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )
-PKGMGR="$(${SCRIPT_DIR}/../../get-os-info.sh --pkg)"
-DISTRO="$(${SCRIPT_DIR}/../../get-os-info.sh --distro)"
-
-
+PKGMGR="$("${SCRIPT_DIR}/../../get-os-info.sh" --pkg)"
+DISTRO="$("${SCRIPT_DIR}/../../get-os-info.sh" --distro)"
 
 case $DISTRO in
 	debian|fedora)
