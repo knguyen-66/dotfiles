@@ -1,6 +1,6 @@
 #!/bin/bash
 
-set -ex
+set -x
 
 # # Conditionally add `$HOME/.local/bin` to the `PATH` in any given shell rc file
 # update_shell_rc() {
