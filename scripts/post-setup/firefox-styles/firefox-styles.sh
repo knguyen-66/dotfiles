@@ -19,6 +19,7 @@ if [[ -n "${PROFILE_DIRS}" ]]; then
 	# apply styling to all profiles
 	while IFS= read -r line; do
 		! [[ -d "${line}/chrome" ]] && { mkdir "${line}/chrome"; }
+		ln -s "${SCRIPT_DIR}/user.js" "${line}/user.js"
 		ln -s "${SCRIPT_DIR}/userChrome.css" "${line}/chrome/userChrome.css"
 	done <<< "${PROFILE_DIRS}"
 	echo "Note: Starting with Firefox 69 you have to enable toolkit.legacyUserProfileCustomizations.stylesheets in about:config."
