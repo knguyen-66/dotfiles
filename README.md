@@ -14,6 +14,9 @@ The setup script will install required packages using [customized setup scripts]
 
 ```sh
 git clone --recurse-submodules https://github.com/knguyen-66/dotfiles
+
+# if already cloned
+git pull --recurse-submodules
 ```
 
 - Run setup scripts to setup the required configuration & symlinks
