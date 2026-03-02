@@ -1,28 +1,13 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 set -e
-
-# # Conditionally add `$HOME/.local/bin` to the `PATH` in any given shell rc file
-# update_shell_rc() {
-#   local shell_rc=$1
-#   if [ -f "$shell_rc" ]; then
-#     if ! grep -q 'export PATH="$HOME/.local/bin:$PATH"' "$shell_rc"; then
-#       echo 'export PATH="$HOME/.local/bin:$PATH"' >> "$shell_rc"
-#     fi
-#   fi
-# }
-#
-# # Create ~/.local/bin/ if it doesn't exist
-# if [ ! -d "$HOME/.local/bin" ]; then
-#   mkdir -p "$HOME/.local/bin"
-# fi
 
 INSTALL_APPS=
 
 print_help () {
   echo "setup.sh: Setup dotfiles script."
   echo ""
-  echo "Syntax: ./setup.sh [-a|h]"
+  echo "Syntax: ./setup.sh [-a][-h]"
   echo "Arguments:"
   echo "  -a | --with-apps: install system apps, mainly for interactive systems like personal machine. You can skip it for setup on servers / non-interactive-login systems."
   echo "  -h | --help: show help. "
@@ -48,6 +33,24 @@ while (( "$#" )); do
         ;;
     esac
 done
+
+# # TODO: update later when script is POSIX-compatible
+# # Conditionally add `$HOME/.local/bin` to the `PATH` in any given shell rc file
+# update_shell_rc() {
+#   local shell_rc=$1
+#   if [ -f "$shell_rc" ]; then
+#     if ! grep -q 'export PATH="$HOME/.local/bin:$PATH"' "$shell_rc"; then
+#       echo 'export PATH="$HOME/.local/bin:$PATH"' >> "$shell_rc"
+#     fi
+#   fi
+# }
+#
+
+# # Create ~/.local/bin/ and export to PATH if it doesn't exist
+if [ ! -d "$HOME/.local/bin" ]; then
+  mkdir -p "$HOME/.local/bin"
+  echo 'export PATH="$HOME/.local/bin:$PATH"' >> "$HOME/.bashrc"
+fi
 
 echo -e "\n==== Pre-dotfile-setup process ====\n"
 PRE_SETUP_SCRIPTS=$(find scripts/pre-setup -maxdepth 2 -type f -name "*.sh")

@@ -15,4 +15,4 @@ tar xf "${SCRIPT_DIR}/lazygit.tar.gz" -C "${SCRIPT_DIR}" lazygit
 # sudo install "${SCRIPT_DIR}/lazygit" -D -t /usr/local/bin/
 
 ## create symlink instead
-sudo ln -s "${SCRIPT_DIR}/lazygit" /usr/local/bin/lazygit
+sudo ln -s "${SCRIPT_DIR}/lazygit" "$HOME/.local/bin/lazygit"

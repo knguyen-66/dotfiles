@@ -9,3 +9,5 @@ keybinding:
     moveDownCommit: <s-down>
     moveUpCommit: <s-up>
     openLogMenu: <c-/>
+  main:
+    toggleSelectHunk: V
