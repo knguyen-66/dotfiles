@@ -2,6 +2,8 @@
 
 set -ex
 
+[[ -n "$(command -v mosh)" ]] && { echo "Mosh already installed. Exiting. "; exit 0; }
+
 # get current script path
 SCRIPT_DIR=$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )
 PKGMGR="$("${SCRIPT_DIR}/../../get-os-info.sh" --pkg)"
