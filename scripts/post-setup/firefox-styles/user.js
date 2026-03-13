@@ -260,8 +260,8 @@ user_pref("network.connectivity-service.enabled", false);
 user_pref("browser.urlbar.speculativeConnect.enabled", false);
 
 // Disable location bar contextual suggestions
-user_pref("browser.urlbar.quicksuggest.enabled", false);
-user_pref("browser.urlbar.suggest.quicksuggest.nonsponsored", false);
+// user_pref("browser.urlbar.quicksuggest.enabled", false);
+// user_pref("browser.urlbar.suggest.quicksuggest.nonsponsored", false);
 user_pref("browser.urlbar.suggest.quicksuggest.sponsored", false);
 
 // Disable live search suggestions
@@ -485,7 +485,7 @@ user_pref("extensions.postDownloadThirdPartyPrompt", false);
  * https://support.mozilla.org/en-US/kb/firefox-protection-against-fingerprinting */
 
 // Enable RFP
-user_pref("privacy.resistFingerprinting", true);
+// user_pref("privacy.resistFingerprinting", true);
 
 // Increase the size of new RFP windows for better usability
 user_pref("privacy.window.maxInnerWidth", 1600);
