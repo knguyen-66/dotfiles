@@ -23,4 +23,5 @@ _darcs
 ^/COPYING
 
 scripts/
+misc/
 setup.sh
