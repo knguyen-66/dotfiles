@@ -1,0 +1,16 @@
+XTerm.termName: xterm-256color
+
+XTerm.vt100.locale: true
+
+XTerm.vt100.metaSendsEscape: true
+
+XTerm.vt100.backarrowKey: false
+XTerm.ttyModes: erase ^?
+
+XTerm.vt100.saveLines: 4096
+
+XTerm.vt100.scrollBar: true
+XTerm.vt100.scrollbar.width: 5
+
+*foreground: rgb:b2/b2/b2
+*background: rgb:08/08/08
