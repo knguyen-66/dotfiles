@@ -1,6 +1,7 @@
 [submodule ".config/nvim"]
 	path = .config/nvim
 	url = https://github.com/knguyen-66/kickstart.nvim
+	update = rebase
 [submodule ".tmux/plugins/tpm"]
 	path = .tmux/plugins/tpm
 	url = https://github.com/tmux-plugins/tpm
