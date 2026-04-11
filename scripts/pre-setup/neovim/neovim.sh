@@ -6,9 +6,9 @@ set -ex
 
 # get current script path
 SCRIPT_DIR=$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )
-
-curl -Lo "${SCRIPT_DIR}/nvim-linux-x86_64.tar.gz" "https://github.com/neovim/neovim/releases/download/stable/nvim-linux-x86_64.tar.gz"
+curl -Lo "${SCRIPT_DIR}/nvim-linux-x86_64.tar.gz" "https://github.com/neovim/neovim/releases/download/v0.11.7/nvim-linux-x86_64.tar.gz"
+# curl -Lo "${SCRIPT_DIR}/nvim-linux-x86_64.tar.gz" "https://github.com/neovim/neovim/releases/download/stable/nvim-linux-x86_64.tar.gz"
 tar xf "${SCRIPT_DIR}/nvim-linux-x86_64.tar.gz" -C "${SCRIPT_DIR}"
 
 ## create symlink
-sudo ln -s "${SCRIPT_DIR}/nvim-linux-x86_64/bin/nvim" "$HOME/.local/bin/nvim"
+sudo ln -sf "${SCRIPT_DIR}/nvim-linux-x86_64/bin/nvim" "$HOME/.local/bin/nvim"
