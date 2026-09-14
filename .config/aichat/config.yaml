@@ -1,14 +1,41 @@
 # see https://github.com/sigoden/aichat/blob/main/config.example.yaml
 
-model: claude-new:claude-sonnet-5
 clients:
-- type: claude-new
+- type: claude
   models:
+    - name: claude-haiku-4-5-20251001
+      max_input_tokens: 200000
+      max_output_tokens: 8192
+      require_max_tokens: true
+      input_price: 1
+      output_price: 5
+      supports_vision: true
+      supports_function_calling: true
+
     - name: claude-sonnet-5
       max_input_tokens: 200000
       max_output_tokens: 8192
       require_max_tokens: true
-      input_price: 3
-      output_price: 15
+      input_price: 2
+      output_price: 10
       supports_vision: true
       supports_function_calling: true
+
+    - name: claude-opus-5:thinking
+      real_name: claude-opus-5
+      max_input_tokens: 200000
+      max_output_tokens: 24000
+      require_max_tokens: true
+      input_price: 5
+      output_price: 25
+      supports_vision: true
+      supports_function_calling: true
+      patch:
+        body:
+          temperature: null
+          top_p: null
+          thinking:
+            type: enabled
+            budget_tokens: 16000
+
+model: claude:claude-sonnet-5
