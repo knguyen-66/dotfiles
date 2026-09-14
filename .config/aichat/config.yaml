@@ -1,5 +1,7 @@
 # see https://github.com/sigoden/aichat/blob/main/config.example.yaml
 
+save_session: true
+
 clients:
 - type: claude
   models:
@@ -11,6 +13,12 @@ clients:
       output_price: 5
       supports_vision: true
       supports_function_calling: true
+      patch:
+        body:
+          temperature: null
+          top_p: null
+          thinking:
+            type: disabled
 
     - name: claude-sonnet-5
       max_input_tokens: 200000
@@ -20,6 +28,12 @@ clients:
       output_price: 10
       supports_vision: true
       supports_function_calling: true
+      patch:
+        body:
+          temperature: null
+          top_p: null
+          thinking:
+            type: disabled
 
     - name: claude-opus-5:thinking
       real_name: claude-opus-5
