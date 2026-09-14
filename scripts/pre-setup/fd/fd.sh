@@ -12,7 +12,7 @@ case $DISTRO in
 		[[ -n "$(command -v fdfind)" ]] && { echo "fd already installed. Exiting. "; exit 0; }
 		sudo $PKGMGR fd-find
 		## if you need to call the program by the "fd" name
-		# sudo ln -s $(which fdfind) ~/.local/bin/fd
+		# sudo ln -sf $(which fdfind) ~/.local/bin/fd
 		;;
 	*)
 		[[ -n "$(command -v fd)" ]] && { echo "fd already installed. Exiting. "; exit 0; }

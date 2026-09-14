@@ -1,0 +1,14 @@
+# see https://github.com/sigoden/aichat/blob/main/config.example.yaml
+
+model: claude-new:claude-sonnet-5
+clients:
+- type: claude-new
+  models:
+    - name: claude-sonnet-5
+      max_input_tokens: 200000
+      max_output_tokens: 8192
+      require_max_tokens: true
+      input_price: 3
+      output_price: 15
+      supports_vision: true
+      supports_function_calling: true
