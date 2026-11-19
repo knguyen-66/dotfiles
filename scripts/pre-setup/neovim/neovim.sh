@@ -11,7 +11,8 @@ cleanup_nvim() {
 setup_nvim() {
     # get current script path
     SCRIPT_DIR=$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )
-    curl -Lo "${SCRIPT_DIR}/nvim-linux-x86_64.tar.gz" "https://github.com/neovim/neovim/releases/download/v0.11.7/nvim-linux-x86_64.tar.gz"
+    curl -Lo "${SCRIPT_DIR}/nvim-linux-x86_64.tar.gz" "https://github.com/neovim/neovim/releases/download/v0.12.6/nvim-linux-x86_64.tar.gz"
+    # curl -Lo "${SCRIPT_DIR}/nvim-linux-x86_64.tar.gz" "https://github.com/neovim/neovim/releases/download/v0.11.7/nvim-linux-x86_64.tar.gz"
     # curl -Lo "${SCRIPT_DIR}/nvim-linux-x86_64.tar.gz" "https://github.com/neovim/neovim/releases/download/stable/nvim-linux-x86_64.tar.gz"
     tar xf "${SCRIPT_DIR}/nvim-linux-x86_64.tar.gz" -C "${SCRIPT_DIR}"
 
