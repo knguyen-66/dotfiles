@@ -1,0 +1,22 @@
+{
+    "chat.disableAIFeatures": true,
+    "telemetry.telemetryLevel": "off",
+    "telemetry.feedback.enabled": false,
+    "telemetry.editStats.enabled": false,
+    "workbench.enableExperiments": false,
+    "extensions.autoUpdate": "off",
+    "extensions.ignoreRecommendations": true,
+
+    // capslock as esc
+    "keyboard.dispatch": "keyCode",
+
+    "workbench.sideBar.location": "right",
+    "workbench.secondarySideBar.defaultVisibility": "hidden",
+    "workbench.startupEditor": "none",
+    "editor.minimap.enabled": false,
+    "explorer.confirmDelete": false,
+    "editor.lineNumbers": "relative",
+
+    "vim.useSystemClipboard": true,
+    "workbench.colorTheme": "Kanagawa",
+}
